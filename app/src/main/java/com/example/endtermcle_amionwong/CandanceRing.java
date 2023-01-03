@@ -13,7 +13,7 @@ import android.view.View.OnClickListener;
 
 public class CandanceRing extends AppCompatActivity implements OnClickListener {
     EditText inputMetal, inputGems;
-    String  resultMessage, txtGems, txtMetal;
+    String  txtGems, txtMetal, customization, custom1,custom2,custom3,custom4, dialogMessage;
     int Custom, alldiamonds_price, diamondgems_price;
     double labor, gold_price, silver_price, overhead, wholesale, retail, custom1_materials, custom2_materials, custom3_materials, custom4_materials;;
     Button btnCompute, btnRef;
@@ -28,7 +28,7 @@ public class CandanceRing extends AppCompatActivity implements OnClickListener {
             btnRef.setOnClickListener(this);
 
             //for price list//
-            labor = 1220; // labor for Candace Classic Ring
+            labor = 1130; // labor for Candace Classic Ring
             overhead = 0.10; //10%
             gold_price = 3297.91; //24K per gram
             silver_price = 43.55; // Silver per gram
@@ -66,64 +66,71 @@ public class CandanceRing extends AppCompatActivity implements OnClickListener {
 
                     if (userMetal == 1 && userGems == 1) {
                         Custom = 1;
+                        custom1 = "24K Gold (Material #1: Metal) and All diamonds (Material #2: Gems)";
 
                     } else if (userMetal == 1 && userGems == 2) {
                         Custom = 2;
+                        custom2 = "24K Gold (Material #1: Metal) and Diamonds with natural gemstones (Material #2: Gems)";
 
                     } else if (userMetal == 2 && userGems == 1) {
                         Custom = 3;
+                        custom3 = "Silver (Material #1: Metal) and All diamonds (Material #2: Gems)";
 
                     } else if (userMetal == 2 && userGems == 2) {
                         Custom = 4;
+                        custom4 = "Silver (Material #1: Metal) and Diamonds with natural gemstones (Material #2: Gems)";
 
                     }
-
                     switch (Custom) {
                         case 1:
                             wholesale = (labor + custom1_materials + overhead) * 2;
                             retail = wholesale * 2;
-                            resultMessage = "The Wholesale price of this customization is: PHP " + df.format(wholesale) + "\n \n \n" + "The Retail price of this customization is: PHP "  + df.format(retail);
-                            Bundle args1 = new Bundle();
-                            args1.putString("result", resultMessage);
-                            Intent pricelist1 = new Intent(CandanceRing.this, PriceList.class);
-                            pricelist1.putExtras(args1);
-                            startActivity(pricelist1);
+                            customization = custom1;
                             break;
 
                         case 2:
                             wholesale = (labor + custom2_materials + overhead) * 2;
                             retail = wholesale * 2;
-                            resultMessage = "The Wholesale price of this customization is: PHP " + df.format(wholesale) + "\n \n \n" + "The Retail price of this customization is: PHP "  + df.format(retail);
-                            Bundle args2 = new Bundle();
-                            args2.putString("result", resultMessage);
-                            Intent pricelist2 = new Intent(CandanceRing.this, PriceList.class);
-                            pricelist2.putExtras(args2);
-                            startActivity(pricelist2);
+                            customization = custom2;
                             break;
 
                         case 3:
                             wholesale = (labor + custom3_materials + overhead) * 2;
                             retail = wholesale * 2;
-                            resultMessage = "The Wholesale price of this customization is: PHP " + df.format(wholesale) + "\n \n \n" + "The Retail price of this customization is: PHP "  + df.format(retail);
-                            Bundle args3 = new Bundle();
-                            args3.putString("result", resultMessage);
-                            Intent pricelist3 = new Intent(CandanceRing.this, PriceList.class);
-                            pricelist3.putExtras(args3);
-                            startActivity(pricelist3);
+                            customization = custom3;
+
                             break;
 
                         case 4:
                             wholesale = (labor + custom4_materials + overhead) * 2;
                             retail = wholesale * 2;
-                            resultMessage = "The Wholesale price of this customization is: PHP " + df.format(wholesale) + "\n \n \n" + "The Retail price of this customization is: PHP "  + df.format(retail);
-                            Bundle args4 = new Bundle();
-                            args4.putString("result", resultMessage);
-                            Intent pricelist4 = new Intent(CandanceRing.this, PriceList.class);
-                            pricelist4.putExtras(args4);
-                            startActivity(pricelist4);
+                            customization = custom4;
                             break;
                     }
+                    dialogMessage = "Your customization is consists of the materials: " + customization + ". " + "\n \n \n" +
+                            "The Wholesale price of this customization is: PHP " + df.format(wholesale) + "\n \n \n" + "The Retail price of this customization is: PHP" + df.format(retail);
+
+
+                    DialogFragmentCustom dialogFragmentImp = new DialogFragmentCustom();
+                    Bundle args5 = new Bundle();
+                    args5.putString("result", dialogMessage);
+
+                    dialogFragmentImp.setArguments(args5);
+                    dialogFragmentImp.show(getSupportFragmentManager(), "Display Result");
+
+                    clearEditText();
             }
+
         }
+
+    private void clearEditText() {
+        inputMetal.getText().clear();
+        inputGems.getText().clear();
     }
+
+    public double ToDecimal(double nbr) {
+        nbr = nbr / 100;
+        return nbr;
+    }
+}
 

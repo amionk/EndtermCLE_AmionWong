@@ -49,6 +49,6 @@
     <string name="Ring">Materials for Ring</string>
     <string name="Bracelet">Materials for Bracelet</string>
     <string name="compute_customization">Showing your customization</string>
-    <string name="txt_close">Showing your customization</string>
+    <string name="txt_close">Done</string>
 
 </resources>

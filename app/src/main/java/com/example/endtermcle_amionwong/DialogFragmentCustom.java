@@ -13,7 +13,7 @@ public class DialogFragmentCustom extends DialogFragment {
 
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
-            String result = getArguments().getString("dialogMessage");
+            String result = getArguments().getString("result");
             // Use the Builder class for convenient dialog construction
             AlertDialog.Builder builder = new AlertDialog.Builder(this.getActivity());
             builder.setTitle(R.string.compute_customization) .setMessage(result)
