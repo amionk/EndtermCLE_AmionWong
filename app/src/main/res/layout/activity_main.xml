@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="416dp"
+        android:layout_height="85dp"
+        android:background="#30302F"
+        android:fontFamily="cursive"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="#FAF9F9"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/title1"
+        android:textColor="#321515"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip"
+        android:layout_width="410dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="16dp"
+        app:chipSurfaceColor="#CEFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title1"
+        app:layout_constraintVertical_bias="0.003"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/necklace"
+        android:layout_width="125dp"
+        android:layout_height="112dp"
+        android:contentDescription="@string/necklace"
+        app:layout_constraintBottom_toBottomOf="@+id/chip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chip"
+        app:layout_constraintVertical_bias="0.533"
+        app:srcCompat="@drawable/necklace"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/necklace1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/necklace1"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chip"
+        app:layout_constraintEnd_toStartOf="@+id/necklace"
+        app:layout_constraintStart_toStartOf="@+id/chip"
+        app:layout_constraintTop_toTopOf="@+id/chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipThree"
+        android:layout_width="410dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="1dp"
+        app:chipSurfaceColor="#CEFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chip"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/bracelet"
+        android:layout_width="127dp"
+        android:layout_height="107dp"
+        android:contentDescription="@string/bracelet"
+        app:layout_constraintBottom_toBottomOf="@+id/chipThree"
+        app:layout_constraintEnd_toEndOf="@+id/chipThree"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="@+id/chipThree"
+        app:layout_constraintTop_toBottomOf="@+id/chip"
+        app:layout_constraintVertical_bias="0.458"
+        app:srcCompat="@drawable/bracelet"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/bracelet1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/bracelet1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chipThree"
+        app:layout_constraintEnd_toStartOf="@+id/bracelet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chip" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipFour"
+        android:layout_width="410dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="1dp"
+        app:chipSurfaceColor="#CEFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipThree"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/earring"
+        android:layout_width="127dp"
+        android:layout_height="105dp"
+        android:contentDescription="@string/earring"
+        app:layout_constraintBottom_toBottomOf="@+id/chipFour"
+        app:layout_constraintEnd_toEndOf="@+id/chipFour"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipThree"
+        app:srcCompat="@drawable/earrings"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/earring1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/earring1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chipFour"
+        app:layout_constraintEnd_toStartOf="@+id/earring"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipThree"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipFive"
+        android:layout_width="410dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="1dp"
+        app:chipSurfaceColor="#CEFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipFour"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ring"
+        android:layout_width="126dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ring"
+        app:layout_constraintBottom_toBottomOf="@+id/chipFive"
+        app:layout_constraintEnd_toEndOf="@+id/chipFive"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipFour"
+        app:srcCompat="@drawable/ring"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/ring1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/ring1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chipFive"
+        app:layout_constraintEnd_toEndOf="@+id/chipFive"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipFour"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="145dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.548"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logomain" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

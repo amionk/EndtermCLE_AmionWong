@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Forever Gems</string>
+    <string name="title">Welcome to Jewelry Gems!</string>
+    <string name="title1">Customize and get the approximate prices</string>
+    <string name="choose1">Choose 1 style (Select the picture):</string>
+    <string name="choose2">Choose 2 types of materials to be used:</string>
+    <string name="buttonr"> Return</string>
+
+    <string name="nHeader">Necklace Styles</string>
+    <string name="necklace">TODO</string>
+    <string name="necklace1">Necklace</string>
+    <string name="txtN1">Agatha Necklace</string>
+    <string name="txtN2">Maurice Necklace</string>
+    <string name="nm1Header">Agatha Necklace Materials</string>
+    <string name="nm2Header">Maurice Necklace Materials</string>
+    <string name="txt_NMaterial1">Material # 1: Metal</string>
+    <string name="txt_Metal1">1. Gold 24K</string>
+    <string name="txt_Metal2">2. Silver</string>
+    <string name="txt_NMaterial2">Material # 2: Gems</string>
+    <string name="txt_Gems1">1. All Diamonds</string>
+    <string name="txt_Gems2">2. Diamonds with natural gemstones</string>
+
+    <string name="bHeader">Bracelet Styles</string>
+    <string name="bracelet">TODO</string>
+    <string name="bracelet1">Bracelet</string>
+    <string name="txtB1">Lauren Cross Bracelet</string>
+    <string name="txtB2">Jaqui Alter Bracelet</string>
+    <string name="bm1Header">Lauren Cross Bracelet Materials</string>
+    <string name="bm2Header">Jaqui Alter Bracelet Materials</string>
+
+
+    <string name="eHeader">Earrings Styles</string>
+    <string name="earring">TODO</string>
+    <string name="earring1">Earrings</string>
+    <string name="txtE1">Teardrop Clover Earrings</string>
+    <string name="txtE2">Sereina Dangle Earrings</string>
+    <string name="em1Header">Teardrop Clover Earrings Materials</string>
+    <string name="em2Header">Sereina Dangle Earrings Materials</string>
+
+    <string name="rHeader">Ring Styles</string>
+    <string name="ring">TODO</string>
+    <string name="ring1">Ring</string>
+    <string name="txtR1">Valeria Diamond Ring</string>
+    <string name="txtR2">Candace Classic Ring</string>
+    <string name="rm1Header">Valeria Diamond Ring Materials</string>
+    <string name="rm2Header">Candace Classic Ring Materials</string>
+
+    <string name="Earring">Materials for Earring</string>
+    <string name="Ring">Materials for Ring</string>
+    <string name="Bracelet">Materials for Bracelet</string>
+    <string name="compute_customization">Showing your customization</string>
+    <string name="txt_close">Showing your customization</string>
+
+</resources>
